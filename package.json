@@ -1,0 +1,37 @@
+{
+  "name": "old-warsaw",
+  "version": "1.0.0",
+  "description": "Vintage website created by using scss.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --mode development --watch",
+    "build": "webpack && uglifyjs ./dist/script/main.js -c -m -o ./dist/script/main.min.js --source-map ./dist/main.min.js.map"
+  },
+  "keywords": [
+    "retro",
+    "vintage",
+    "scss"
+  ],
+  "author": "ag-vectivus",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
+    "babel-loader": "^8.0.6",
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "uglify-js": "^3.8.0",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11"
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "IE 11",
+    "IE 10"
+  ]
+}
