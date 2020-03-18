@@ -9,9 +9,9 @@ function style() {
   // 1. where is my scss file
   return gulp.src('./src/scss/**/*.scss')
   // 2. pass that file through sass compiler
-    .pipe(sass(/* {
-      outputStyle : "extended" //code style - extended, nested, copressed, compact
-    } */).on('error', sass.logError))
+    .pipe(sass({
+      outputStyle : "compressed" //code style - extended, nested, copressed, compact
+    }).on('error', sass.logError))
   // Use autoprefixer
     .pipe(autoprefixer())
   // 3. where do I save the compiled CSS?
@@ -27,7 +27,7 @@ function watch() {
       directory: true
     }
   });
-  gulp.watch('./scss/**/*.scss', style);
+  gulp.watch('./src/scss/**/*.scss', style);
   gulp.watch('./dist/*.html').on('change', browserSync.reload);
   gulp.watch('./dist/script/*.js').on('change', browserSync.reload);
 }

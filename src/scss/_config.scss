@@ -1,0 +1,57 @@
+// || Simple reset
+html {
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+// || Variables
+$blue-color: rgb(120, 204, 204);
+$darkgrey-color: rgb(80, 84, 91);
+$khaki-color: rgb(228, 224, 207);
+$brickred-color: rgb(227, 139, 105);
+$lightgrey-color: rgb(225, 222, 219);
+
+$text-dark-color: rgb(56, 58, 60);
+$text-medium-color: rgb(75, 78, 76);
+$text-fair-color: rgb(246, 237, 216);
+
+
+@mixin flex-row {
+  display: flex;
+  flex-flow: row wrap;
+  vertical-align: middle;
+  justify-content: space-around;
+}
+
+@mixin global-margin {
+  margin: 0 15%;
+}
+
+@mixin transition-ease {
+  transition: all 0.5s ease;
+}
+
+@mixin media-medium {
+  @media screen and (min-width: 480px) {
+    @content;
+  }
+}
+
+@mixin media-large {
+  @media screen and (min-width: 800px) {
+    @content;
+  }
+}
+
+@mixin media-larger {
+  @media screen and (min-width: 1100px) {
+    @content;
+  }
+}
