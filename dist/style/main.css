@@ -1,1 +1,73 @@
-html{box-sizing:border-box}*,*::before,*::after{box-sizing:inherit}*{margin:0;padding:0}nav{box-shadow:0px 2px 7px 0px rgba(0,0,0,0.5)}.navigation{background-color:#78cccc;color:#f6edd8;width:100%;height:13em;padding:5.4em 0}.navigation__list{margin:0 15%;display:-ms-flexbox;display:flex;-ms-flex-flow:row wrap;flex-flow:row wrap;vertical-align:middle;-ms-flex-pack:distribute;justify-content:space-around}.navigation__button{-ms-flex:1;flex:1;list-style:none;text-transform:uppercase;text-align:center;font-size:2.2em;text-shadow:0px 2px 2px rgba(0,0,0,0.2)}.navigation__logo{position:relative;top:-3rem;width:9rem;overflow:visible;z-index:1}.navigation__dashline{border:1px dashed #50545b;position:relative;top:-5rem;z-index:0}body{font-size:10px;line-height:1;background-color:#78cccc}
+html {
+  box-sizing: border-box; }
+
+*, *::before, *::after {
+  box-sizing: inherit; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 10px;
+  line-height: 1; }
+
+.navigation {
+  box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.5);
+  background-color: #78cccc;
+  color: #f6edd8;
+  height: 6.5rem; }
+  .navigation__icon {
+    margin: 0 15%;
+    width: 3rem;
+    height: 2rem;
+    position: absolute;
+    top: 2.25rem;
+    right: 1rem;
+    cursor: pointer;
+    transition: all 0.5s ease; }
+    .navigation__icon--burger {
+      position: absolute;
+      top: 1rem;
+      width: 3rem;
+      height: 3px;
+      background: #4b4e4c;
+      box-shadow: 3px 2px 7px 0px rgba(0, 0, 0, 0.3); }
+      .navigation__icon--burger::before {
+        content: '';
+        position: absolute;
+        top: -1rem;
+        width: 3rem;
+        height: 3px;
+        background: #4b4e4c;
+        box-shadow: 3px 2px 7px 0px rgba(0, 0, 0, 0.3); }
+      .navigation__icon--burger::after {
+        content: '';
+        position: absolute;
+        top: 1rem;
+        width: 3rem;
+        height: 3px;
+        background: #4b4e4c;
+        box-shadow: 3px 2px 7px 0px rgba(0, 0, 0, 0.3); }
+  .navigation__list {
+    margin: 0 15%; }
+  .navigation__button {
+    visibility: hidden;
+    list-style: none;
+    cursor: pointer;
+    transition: all 0.5s ease; }
+  .navigation__logo {
+    width: 9.33rem;
+    position: absolute;
+    top: 0.5rem;
+    left: 3rem;
+    visibility: visible;
+    overflow: visible;
+    z-index: 1; }
+  .navigation__image {
+    width: 100%; }
+  .navigation__dashline {
+    position: relative;
+    top: 1.75rem;
+    border-top: 1px dashed #50545b;
+    opacity: 0.25; }

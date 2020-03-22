@@ -10,7 +10,7 @@ function style() {
   return gulp.src('./src/scss/**/*.scss')
   // 2. pass that file through sass compiler
     .pipe(sass({
-      outputStyle : "compressed" //code style - extended, nested, copressed, compact
+      outputStyle : "extended" //code style - extended, nested, copressed, compact
     }).on('error', sass.logError))
   // Use autoprefixer
     .pipe(autoprefixer())
