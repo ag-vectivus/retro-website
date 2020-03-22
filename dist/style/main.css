@@ -13,61 +13,125 @@ html {
   line-height: 1; }
 
 .navigation {
-  box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.5);
-  background-color: #78cccc;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: 6.5rem;
+  font-size: 2.2rem;
   color: #f6edd8;
-  height: 6.5rem; }
-  .navigation__icon {
-    margin: 0 15%;
-    width: 3rem;
-    height: 2rem;
+  background-color: #78cccc;
+  box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.5);
+  transition: all 0.5s ease; }
+  .navigation__button {
     position: absolute;
     top: 2.25rem;
-    right: 1rem;
+    right: 5rem;
+    height: 2rem;
+    width: 3rem;
     cursor: pointer;
-    transition: all 0.5s ease; }
-    .navigation__icon--burger {
+    transition: all 0.5s ease;
+    z-index: 3; }
+    .navigation__button--burger {
       position: absolute;
       top: 1rem;
       width: 3rem;
       height: 3px;
       background: #4b4e4c;
-      box-shadow: 3px 2px 7px 0px rgba(0, 0, 0, 0.3); }
-      .navigation__icon--burger::before {
+      box-shadow: 3px 2px 7px 0px rgba(0, 0, 0, 0.3);
+      transition: all 0.5s ease; }
+      .navigation__button--burger::before {
         content: '';
         position: absolute;
         top: -1rem;
         width: 3rem;
         height: 3px;
         background: #4b4e4c;
-        box-shadow: 3px 2px 7px 0px rgba(0, 0, 0, 0.3); }
-      .navigation__icon--burger::after {
+        box-shadow: 3px 2px 7px 0px rgba(0, 0, 0, 0.3);
+        transition: all 0.5s ease; }
+      .navigation__button--burger::after {
         content: '';
         position: absolute;
         top: 1rem;
         width: 3rem;
         height: 3px;
         background: #4b4e4c;
-        box-shadow: 3px 2px 7px 0px rgba(0, 0, 0, 0.3); }
+        box-shadow: 3px 2px 7px 0px rgba(0, 0, 0, 0.3);
+        transition: all 0.5s ease; }
+      .navigation__button--burger.activated, .navigation__button--burger.activated::before, .navigation__button--burger.activated::after {
+        background-color: #e1dedb;
+        box-shadow: 0px 2px 7px 0px #e1dedb; }
+      .navigation__button--burger.activated::after {
+        top: 0rem;
+        color: transparent; }
+      .navigation__button--burger.activated {
+        rotate: 45deg; }
+      .navigation__button--burger.activated::before {
+        top: 0rem;
+        rotate: 90deg; }
+    .navigation__button:focus, .navigation__button:hover {
+      scale: 1.1; }
   .navigation__list {
-    margin: 0 15%; }
-  .navigation__button {
-    visibility: hidden;
-    list-style: none;
-    cursor: pointer;
-    transition: all 0.5s ease; }
+    list-style: none; }
   .navigation__logo {
-    width: 9.33rem;
     position: absolute;
     top: 0.5rem;
-    left: 3rem;
-    visibility: visible;
+    left: 5rem;
+    width: 9.33rem;
     overflow: visible;
-    z-index: 1; }
-  .navigation__image {
-    width: 100%; }
+    cursor: pointer;
+    transition: all 0.5s ease;
+    z-index: 3; }
+    .navigation__logo .navigation__image {
+      width: 100%; }
+  .navigation__link-container {
+    visibility: hidden;
+    height: 100vh;
+    width: 100vw;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: space-evenly;
+        justify-content: space-evenly;
+    list-style: none;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    transition: all 0.5s ease; }
+    .navigation__link-container.open {
+      visibility: visible;
+      background-color: rgba(56, 58, 60, 0.9);
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      z-index: 2; }
+  .navigation__link {
+    visibility: hidden;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    -webkit-transform: translateX(-100vw);
+            transform: translateX(-100vw); }
+    .navigation__link.open {
+      visibility: visible;
+      -webkit-transform: translateX(0);
+              transform: translateX(0); }
   .navigation__dashline {
-    position: relative;
-    top: 1.75rem;
+    position: absolute;
+    top: 5.75rem;
+    width: 100%;
+    color: transparent;
+    opacity: 0.25;
     border-top: 1px dashed #50545b;
-    opacity: 0.25; }
+    z-index: 2; }
+
+.navigation__link:nth-of-type(1) {
+  transition-delay: 0.25s; }
+
+.navigation__link:nth-of-type(2) {
+  transition-delay: 0.35s; }
+
+.navigation__link:nth-of-type(3) {
+  transition-delay: 0.45s; }
+
+.navigation__link:nth-of-type(4) {
+  transition-delay: 0.55s; }

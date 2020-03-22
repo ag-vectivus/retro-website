@@ -1,18 +1,24 @@
 .navigation {
-  @include container-shadow;
-  background-color: $blue-color;
-  color: $text-fair-color;
+  position: sticky;
+  top: 0;
   height: 6.5rem;
 
-  &__icon {
-    @include global-margin;
-    width: 3rem;
-    height: 2rem;
+  font-size: 2.2rem;
+  color: $text-fair-color;
+
+  background-color: $blue-color;
+  @include container-shadow;
+  @include transition-ease;
+
+  &__button {
     position: absolute;
     top: 2.25rem;
-    right: 1rem;
+    right: 5rem;
+    height: 2rem;
+    width: 3rem;
     cursor: pointer;
     @include transition-ease;
+    z-index: 3;
     
     &--burger {
       position: absolute;
@@ -21,6 +27,7 @@
       height: 3px;
       background: $text-medium-color;
       @include element-shadow;
+      @include transition-ease;
       
       &::before {
         content: '';
@@ -30,6 +37,7 @@
         height: 3px;
         background: $text-medium-color;
         @include element-shadow;
+        @include transition-ease;
       }
     
       &::after {
@@ -40,39 +48,106 @@
         height: 3px;
         background: $text-medium-color;
         @include element-shadow;
+        @include transition-ease;
       }
+
+      &.activated,
+      &.activated::before,
+      &.activated::after {
+        background-color: $lightgrey-color;
+        box-shadow: 0px 2px 7px 0px $lightgrey-color;
+      }
+
+      &.activated::after {
+        top: 0rem;
+        color: transparent
+      }
+
+      &.activated {
+        rotate: 45deg;
+      }
+
+      &.activated::before {
+        top: 0rem;
+        rotate: 90deg;
+      }
+    }
+
+    &:focus,
+    &:hover {
+      scale: 1.1;
     }
   }
 
   &__list {
-    @include global-margin;
-  }  
-
-  &__button {
-    visibility: hidden;
     list-style: none;
-    cursor: pointer;
-    @include transition-ease;
   }
 
   &__logo {
-    width: 9.33rem;
     position: absolute;
     top: 0.5rem;
-    left: 3rem;
-    visibility: visible;
+    left: 5rem;
+    
+    width: 9.33rem;
     overflow: visible;
-    z-index: 1;
+    cursor: pointer;
+    
+    @include transition-ease;
+    z-index: 3;
+    
+    .navigation__image {
+      width: 100%;
+    }
   }
 
-  &__image {
-    width: 100%;
+  &__link-container {
+    visibility: hidden;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+    transform: translateY(-100%);
+    @include transition-ease;
+    
+    &.open {
+      visibility: visible;
+  
+      background-color: rgba(56, 58, 60, 0.9);
+      transform: translateY(0);
+      z-index: 2;
+    }
+  }  
+
+  &__link {
+    visibility: hidden;
+    cursor: pointer;
+    @include transition-ease;
+    transform: translateX(-100vw);
+
+    &.open {
+      visibility: visible;
+      transform: translateX(0);
+    }
   }
 
   &__dashline {
-    position: relative;
-    top: 1.75rem;
-    border-top: 1px dashed $darkgrey-color;
+    position: absolute;
+    top: 5.75rem;
+    width: 100%;
+    
+    color: transparent;
     opacity: 0.25;
+    border-top: 1px dashed $darkgrey-color;
+    
+    z-index: 2;
+  }
+}
+
+@for $i from 1 through 4 {
+  .navigation__link:nth-of-type(#{$i}) {
+    transition-delay: ($i * 0.1s) + 0.15s;
   }
 }
