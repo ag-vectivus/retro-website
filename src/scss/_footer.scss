@@ -3,28 +3,21 @@
   color: $text-fair-color;
   text-align: center;
 
-  background-color: $darkgrey-color;
+  background: url(../images/background/footer-background-w1100.png);;
   @include transition-ease;
 
   &__title {
-    margin: 3rem auto 0;
-    text-transform: uppercase;
-
-    &--caption {
-      font-size: 1.2rem;
-
-      &:last-of-type {
-        margin-bottom: 3rem;
-      }
-    }
+    @include main-title;
   }
 
-  &__social-title {
+  .social__title {
     margin: 3rem auto 1rem;
-    text-transform: uppercase;
 
-    & span {
-      border-bottom: 2px solid $text-fair-color;
+    &--underline {
+      margin: 1.2rem auto;
+      width: 5rem;
+      background-color: $text-fair-color;
+      padding-bottom: 2px;
     }
   }
 
@@ -83,17 +76,12 @@
   }
 
   &__dashline {
-    width: 100%;
-    padding: 0.5rem;
-
-    color: transparent;
-    
-    opacity: 0.25;
-    border-bottom: 1px dashed $text-fair-color;
+    @include dashline-first;
+    border-color: $text-fair-color;
 
     &--bottom {
-      border-bottom: none;
-      border-top: 1px dashed $text-fair-color;
+      @include dashline-second;
+      border-color: $text-fair-color;
     }
   }
 }

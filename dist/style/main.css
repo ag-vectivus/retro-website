@@ -12,14 +12,33 @@ html {
   font-size: 10px;
   line-height: 1; }
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+  font-family: "Bazar";
+  text-transform: uppercase; }
+
+h1 {
+  font-size: 6.5rem; }
+
+h2 {
+  font-size: 2.7rem; }
+
+h3 {
+  font-size: 2.2rem; }
+
+h4 {
+  font-size: 1.6rem; }
+
+h5 {
+  font-size: 1.4rem; }
+
 .navigation {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   height: 6.5rem;
-  font-size: 2.2rem;
   color: #f6edd8;
-  background-color: #78cccc;
+  background: url(../images/background/navigation-background-w1100.png);
   box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.5);
   transition: all 0.5s ease;
   z-index: 2; }
@@ -27,8 +46,8 @@ html {
     position: absolute;
     top: 2.25rem;
     right: 5rem;
-    height: 2rem;
     width: 3rem;
+    height: 2rem;
     cursor: pointer;
     transition: all 0.5s ease;
     z-index: 3; }
@@ -59,8 +78,8 @@ html {
         box-shadow: 3px 2px 7px 0px rgba(0, 0, 0, 0.3);
         transition: all 0.5s ease; }
       .navigation__button--burger.activated, .navigation__button--burger.activated::before, .navigation__button--burger.activated::after {
-        background-color: #e1dedb;
-        box-shadow: 0px 2px 7px 0px #e1dedb; }
+        background-color: #f6edd8;
+        box-shadow: 0px 0px 7px 0px #f6edd8; }
       .navigation__button--burger.activated::after {
         top: 0rem;
         color: transparent; }
@@ -71,7 +90,7 @@ html {
         rotate: 90deg; }
     .navigation__button:focus, .navigation__button:hover {
       scale: 1.1; }
-  .navigation__list {
+  .navigation__menu {
     list-style: none; }
   .navigation__logo {
     position: absolute;
@@ -82,30 +101,32 @@ html {
     cursor: pointer;
     transition: all 0.5s ease;
     z-index: 3; }
-    .navigation__logo .navigation__image {
+    .navigation__logo--image {
       width: 100%; }
-  .navigation__link-container {
+  .navigation__links {
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-direction: column;
-        flex-direction: column;
+    -ms-flex-direction: row;
+        flex-direction: row;
     -ms-flex-align: center;
         align-items: center;
+    vertical-align: middle;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-direction: column;
+        flex-direction: column;
     -ms-flex-pack: space-evenly;
         justify-content: space-evenly;
-    font-size: 27px;
-    font-family: "Bazar";
-    text-transform: uppercase;
-    color: #f9ebd9;
-    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
-    height: 10rem;
+    color: #f6edd8;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+    height: 3rem;
     list-style: none;
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
+    -webkit-transform: translateY(-300%);
+            transform: translateY(-300%);
     transition: all 0.5s ease; }
-    .navigation__link-container.open {
+    .navigation__links.open {
       height: 100vh;
-      width: 100vw;
+      width: 100%;
       visibility: visible;
       background-color: rgba(56, 58, 60, 0.9);
       -webkit-transform: translateY(0);
@@ -121,13 +142,15 @@ html {
       visibility: visible;
       -webkit-transform: translateX(0);
               transform: translateX(0); }
+      .navigation__link.open:focus, .navigation__link.open:hover {
+        color: #e38b69; }
   .navigation__dashline {
     position: absolute;
     top: 5.75rem;
     width: 100%;
     color: transparent;
     opacity: 0.25;
-    border-top: 1px dashed #50545b;
+    border-top: 1px dashed #4b4e4c;
     z-index: 2; }
 
 .navigation__link:nth-of-type(1) {
@@ -143,78 +166,90 @@ html {
   transition-delay: 0.55s; }
 
 .header {
-  font-size: 2.2rem;
   color: #f6edd8;
   text-align: center;
-  background: url(../images/header-background-w1100.png);
+  background: url(../images/background/header-background-w1100.png);
   transition: all 0.5s ease; }
   .header__title {
-    margin: 3rem 0 1rem;
-    font-size: 6.5rem;
+    margin: 3rem auto 1rem;
     font-family: "Seaside Resort NF";
-    color: #585858;
-    text-shadow: 0px 1px 1px rgba(232, 244, 244, 0.3); }
+    color: #f6edd8;
+    text-shadow: 3px 0px rgba(75, 78, 76, 0.7); }
   .header__ribbon {
     display: inline-block;
-    width: 35rem;
-    margin: 1rem auto 1.5rem;
+    margin: 1rem 5%;
     overflow: visible; }
-    .header__ribbon-image {
-      width: 35rem; }
+    .header__ribbon--image {
+      width: 100%; }
   .header__slider {
     margin: 1rem 5%;
     padding: 0.5rem;
-    background-color: white; }
+    background-color: #fbfaf6;
+    box-shadow: 3px 2px 7px 0px rgba(0, 0, 0, 0.3); }
   .header__slides {
     background-color: black; }
   .header__slide {
-    padding-bottom: 25rem;
-    background-color: coral; }
+    padding-bottom: 15rem;
+    background-color: #e3dfd7; }
   .header .slider__caption {
-    color: black;
-    margin: 0.5rem auto 0.7rem;
-    text-transform: uppercase; }
+    color: rgba(0, 0, 0, 0.6);
+    line-height: 1.5; }
   .header__caption {
-    margin: 2rem 10% 3rem;
-    text-transform: uppercase; }
+    font-size: 3.2rem;
+    color: #f6edd8;
+    line-height: 1.3;
+    margin: 2.5rem 5% 0; }
+    .header__caption--second-line {
+      font-size: 2rem;
+      line-height: 1.4;
+      margin: 0 5% 3rem; }
   .header__dashline {
     width: 100%;
     padding: 0.5rem;
     color: transparent;
     opacity: 0.25;
-    border-bottom: 1px dashed #50545b; }
+    border-bottom: 1px dashed transparent;
+    border-color: #50545b; }
     .header__dashline--bottom {
       border-bottom: none;
-      border-top: 1px dashed #50545b; }
+      border-top: 1px dashed transparent;
+      border-color: #50545b; }
 
 .main {
-  font-size: 2.2rem;
   color: #383a3c;
   text-align: center;
-  background-color: #e4e0cf;
   transition: all 0.5s ease; }
   .main__about {
-    background-color: #e4e0cf; }
+    background: url(../images/background/about-background-w1100.png); }
   .main__portfolio {
-    background-color: #e38b69; }
+    background: url(../images/background/portfolio-background-w1100.png); }
   .main__blog {
-    background-color: #e1dedb; }
+    background: url(../images/background/blog-background-w1100.png); }
   .main__title {
     margin: 3rem auto 0;
-    text-transform: uppercase;
-    font-size: 65px;
-    font-family: "Bazar";
-    color: #393a3a;
-    text-shadow: 5px 5px 0px #fcfaf7; }
+    text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.3); }
+    .main__title--separator {
+      margin: 1rem;
+      font-family: "Roboto";
+      font-weight: bold;
+      font-size: 1.1rem;
+      text-shadow: 0px 0px 1px black; }
+      .main__title--separator span {
+        position: relative;
+        top: -0.45rem; }
     .main__title--caption {
-      font-size: 1.2rem; }
-      .main__title--caption:last-of-type {
-        margin-bottom: 3rem; }
+      font-family: "Oswald";
+      font-weight: 400;
+      line-height: 1.6;
+      text-shadow: none; }
   .main__container {
+    margin: 2rem 15%;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: row;
         flex-direction: row;
+    -ms-flex-align: center;
+        align-items: center;
     vertical-align: middle;
     -ms-flex-pack: distribute;
         justify-content: space-around;
@@ -225,57 +260,77 @@ html {
         flex: 1 30rem; }
     .main__article .article__image {
       display: inline-block;
-      margin: 1rem auto;
-      width: 20rem; }
+      margin: 2rem auto 1rem;
+      width: 10rem; }
       .main__article .article__image--img {
         width: 100%; }
     .main__article .article__title {
-      margin: 3rem auto 1rem;
-      text-transform: uppercase; }
+      margin: 1rem auto; }
       .main__article .article__title--caption {
-        font-size: 1.8rem;
-        padding-bottom: 1rem;
-        text-transform: uppercase; }
-        .main__article .article__title--caption span {
-          border-bottom: 2px solid #383a3c; }
+        margin: 1.5rem auto;
+        font-family: "Roboto Slab";
+        text-shadow: 0px 0px 1px #383a3c; }
+      .main__article .article__title--underline {
+        margin: 1.2rem auto;
+        width: 5rem;
+        background-color: #383a3c;
+        padding-bottom: 1px;
+        box-shadow: 0px 0px 2px #383a3c; }
     .main__article .article__paragraph {
-      margin: 1rem 15%;
-      font-size: 1.6rem;
-      line-height: 2rem;
+      margin: 1rem 2rem;
+      font-family: "Roboto Slab";
+      font-size: 1.4rem;
+      line-height: 1.8;
       text-align: left; }
   .main__dashline {
     width: 100%;
     padding: 0.5rem;
     color: transparent;
     opacity: 0.25;
-    border-bottom: 1px dashed #383a3c; }
+    border-bottom: 1px dashed transparent;
+    border-color: #383a3c; }
     .main__dashline--bottom {
       border-bottom: none;
-      border-top: 1px dashed #383a3c; }
+      border-top: 1px dashed transparent;
+      border-color: #383a3c; }
 
 .footer {
   font-size: 2.2rem;
   color: #f6edd8;
   text-align: center;
-  background-color: #50545b;
+  background: url(../images/background/footer-background-w1100.png);
   transition: all 0.5s ease; }
   .footer__title {
     margin: 3rem auto 0;
-    text-transform: uppercase; }
+    text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.3); }
+    .footer__title--separator {
+      margin: 1rem;
+      font-family: "Roboto";
+      font-weight: bold;
+      font-size: 1.1rem;
+      text-shadow: 0px 0px 1px black; }
+      .footer__title--separator span {
+        position: relative;
+        top: -0.45rem; }
     .footer__title--caption {
-      font-size: 1.2rem; }
-      .footer__title--caption:last-of-type {
-        margin-bottom: 3rem; }
-  .footer__social-title {
-    margin: 3rem auto 1rem;
-    text-transform: uppercase; }
-    .footer__social-title span {
-      border-bottom: 2px solid #f6edd8; }
+      font-family: "Oswald";
+      font-weight: 400;
+      line-height: 1.6;
+      text-shadow: none; }
+  .footer .social__title {
+    margin: 3rem auto 1rem; }
+    .footer .social__title--underline {
+      margin: 1.2rem auto;
+      width: 5rem;
+      background-color: #f6edd8;
+      padding-bottom: 2px; }
   .footer__social-media {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: row;
         flex-direction: row;
+    -ms-flex-align: center;
+        align-items: center;
     vertical-align: middle;
     -ms-flex-pack: distribute;
         justify-content: space-around;
@@ -317,7 +372,9 @@ html {
     padding: 0.5rem;
     color: transparent;
     opacity: 0.25;
-    border-bottom: 1px dashed #f6edd8; }
+    border-bottom: 1px dashed transparent;
+    border-color: #f6edd8; }
     .footer__dashline--bottom {
       border-bottom: none;
-      border-top: 1px dashed #f6edd8; }
+      border-top: 1px dashed transparent;
+      border-color: #f6edd8; }

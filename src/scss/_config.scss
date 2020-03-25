@@ -16,6 +16,32 @@ html {
   line-height: 1;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+  font-family: "Bazar";
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 6.5rem;
+}
+
+h2 {
+  font-size: 2.7rem;
+}
+
+h3 {
+  font-size: 2.2rem;
+}
+
+h4 {
+  font-size: 1.6rem;
+}
+
+h5 {
+  font-size: 1.4rem;
+}
+
 // || Variables
 $blue-color: rgb(120, 204, 204);
 $darkgrey-color: rgb(80, 84, 91);
@@ -27,10 +53,10 @@ $text-dark-color: rgb(56, 58, 60);
 $text-medium-color: rgb(75, 78, 76);
 $text-fair-color: rgb(246, 237, 216);
 
-
 @mixin flex-row {
   display: flex;
   flex-direction: row;
+  align-items: center;
   vertical-align: middle;
   justify-content: space-around;
 }
@@ -49,6 +75,44 @@ $text-fair-color: rgb(246, 237, 216);
 
 @mixin element-shadow {
   box-shadow: 3px 2px 7px 0px rgba(0, 0, 0, 0.3);
+}
+
+@mixin main-title {
+  margin: 3rem auto 0;
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.3);
+  
+  &--separator {
+    margin: 1rem;
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 1);
+
+    & span {
+      position: relative;
+      top: -0.45rem;
+    }
+  }
+
+  &--caption {
+    font-family: "Oswald";
+    font-weight: 400;
+    line-height: 1.6;
+    text-shadow: none;
+  }
+}
+
+@mixin dashline-first {
+  width: 100%;
+  padding: 0.5rem;
+  color: transparent;
+  opacity: 0.25;
+  border-bottom: 1px dashed transparent;
+}
+
+@mixin dashline-second {
+  border-bottom: none;
+  border-top: 1px dashed transparent;
 }
 
 @mixin media-medium {

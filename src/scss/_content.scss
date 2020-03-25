@@ -1,41 +1,26 @@
 .main {
-  font-size: 2.2rem;
   color: $text-dark-color;
   text-align: center;
-
-  background-color: $khaki-color;
   @include transition-ease;
 
   &__about {
-    background-color: $khaki-color;
+    background: url(../images/background/about-background-w1100.png);
   }
 
   &__portfolio {
-    background-color: $brickred-color;
+    background: url(../images/background/portfolio-background-w1100.png);
   }
   
   &__blog {
-    background-color: $lightgrey-color;
+    background: url(../images/background/blog-background-w1100.png);
   }
 
   &__title {
-    margin: 3rem auto 0;
-    text-transform: uppercase;
-    font-size: 65px;
-    font-family: "Bazar";
-    color: rgba(57, 58, 58, 1);
-    text-shadow: 5px 5px 0px rgba(252, 250, 247, 1);  
-
-    &--caption {
-      font-size: 1.2rem;
-
-      &:last-of-type {
-        margin-bottom: 3rem;
-      }
-    }
+    @include main-title;
   }
 
   &__container {
+    margin: 2rem 15%;
     @include flex-row;
     flex-wrap: wrap;
   }
@@ -45,48 +30,48 @@
 
     .article__image {
       display: inline-block;
-      margin: 1rem auto;
-      width: 20rem;
+      margin: 2rem auto 1rem;
+      width: 10rem;
 
       &--img {
         width: 100%;
       }
     }
 
-    .article__title {
-      margin: 3rem auto 1rem;
-      text-transform: uppercase;
-
+  .article__title {
+      margin: 1rem auto;
+    
       &--caption {
-        font-size: 1.8rem;
-        padding-bottom: 1rem;
-        text-transform: uppercase;
-        & span {
-          border-bottom: 2px solid $text-dark-color;
-        }
+        margin: 1.5rem auto;
+        font-family: "Roboto Slab";
+        text-shadow: 0px 0px 1px $text-dark-color;
+      }
+    
+      &--underline {
+        margin: 1.2rem auto;
+        width: 5rem;
+        background-color: $text-dark-color;
+        padding-bottom: 1px;
+        box-shadow: 0px 0px 2px $text-dark-color;
       }
     }
 
     .article__paragraph {
-      margin: 1rem 15%;
-      font-size: 1.6rem;
-      line-height: 2rem;
+      margin: 1rem 2rem;
+      font-family: "Roboto Slab";
+      font-size: 1.4rem;
+      line-height: 1.8;
       text-align: left;
     }
   }
 
   &__dashline {
-    width: 100%;
-    padding: 0.5rem;
-
-    color: transparent;
-    
-    opacity: 0.25;
-    border-bottom: 1px dashed $text-dark-color;
+    @include dashline-first;
+    border-color: $text-dark-color;
 
     &--bottom {
-      border-bottom: none;
-      border-top: 1px dashed $text-dark-color;
+      @include dashline-second;
+      border-color: $text-dark-color;
     }
   }
 }

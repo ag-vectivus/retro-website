@@ -1,6 +1,6 @@
 const navigationButton = document.querySelector('.navigation__button');
 const navigationButtonBurger = document.querySelector('.navigation__button--burger');
-const navigationLinks = document.querySelector('.navigation__link-container');
+const navigationLinks = document.querySelector('.navigation__links');
 const navigationLinkNode = document.querySelectorAll('.navigation__link');
 
 navigationButton.addEventListener('click', function() {
