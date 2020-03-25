@@ -1,0 +1,92 @@
+.main {
+  font-size: 2.2rem;
+  color: $text-dark-color;
+  text-align: center;
+
+  background-color: $khaki-color;
+  @include transition-ease;
+
+  &__about {
+    background-color: $khaki-color;
+  }
+
+  &__portfolio {
+    background-color: $brickred-color;
+  }
+  
+  &__blog {
+    background-color: $lightgrey-color;
+  }
+
+  &__title {
+    margin: 3rem auto 0;
+    text-transform: uppercase;
+    font-size: 65px;
+    font-family: "Bazar";
+    color: rgba(57, 58, 58, 1);
+    text-shadow: 5px 5px 0px rgba(252, 250, 247, 1);  
+
+    &--caption {
+      font-size: 1.2rem;
+
+      &:last-of-type {
+        margin-bottom: 3rem;
+      }
+    }
+  }
+
+  &__container {
+    @include flex-row;
+    flex-wrap: wrap;
+  }
+
+  &__article {
+    flex: 1 30rem;
+
+    .article__image {
+      display: inline-block;
+      margin: 1rem auto;
+      width: 20rem;
+
+      &--img {
+        width: 100%;
+      }
+    }
+
+    .article__title {
+      margin: 3rem auto 1rem;
+      text-transform: uppercase;
+
+      &--caption {
+        font-size: 1.8rem;
+        padding-bottom: 1rem;
+        text-transform: uppercase;
+        & span {
+          border-bottom: 2px solid $text-dark-color;
+        }
+      }
+    }
+
+    .article__paragraph {
+      margin: 1rem 15%;
+      font-size: 1.6rem;
+      line-height: 2rem;
+      text-align: left;
+    }
+  }
+
+  &__dashline {
+    width: 100%;
+    padding: 0.5rem;
+
+    color: transparent;
+    
+    opacity: 0.25;
+    border-bottom: 1px dashed $text-dark-color;
+
+    &--bottom {
+      border-bottom: none;
+      border-top: 1px dashed $text-dark-color;
+    }
+  }
+}
