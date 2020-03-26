@@ -1,0 +1,39 @@
+.about__article {
+  flex: 1 30rem;
+
+  .about__image {
+    display: inline-block;
+    margin: 2rem auto 1rem;
+    width: 10rem;
+
+    &--img {
+      width: 100%;
+    }
+  }
+}
+
+.about__title {
+  margin: 1rem auto;
+
+  &--caption {
+    margin: 1.5rem auto;
+    font-family: "Roboto Slab";
+    text-shadow: 0px 0px 1px $text-dark-color;
+  }
+
+  &--underline {
+    margin: 1.2rem auto;
+    width: 5rem;
+    background-color: $text-dark-color;
+    padding-bottom: 1px;
+    box-shadow: 0px 0px 2px $text-dark-color;
+  }
+}
+
+.about__paragraph {
+  margin: 1rem 2rem;
+  font-family: "Roboto Slab";
+  font-size: 1.4rem;
+  line-height: 1.8;
+  text-align: left;
+}

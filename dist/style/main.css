@@ -1,3 +1,27 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url("../fonts/robotoslab-variablefont_wght-webfont.woff2") format("woff2"), url("../fonts/robotoslab-variablefont_wght-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Seaside Resort NF';
+  src: url("../fonts/seasideresortnf-webfont.woff2") format("woff2"), url("../fonts/seasideresortnf-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Oswald';
+  src: url("../fonts/oswald-variablefont_wght-webfont.woff2") format("woff2"), url("../fonts/oswald-variablefont_wght-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Bazar';
+  src: url("../fonts/bazar-webfont.woff2") format("woff2"), url("../fonts/bazar-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
 html {
   box-sizing: border-box; }
 
@@ -39,7 +63,7 @@ h5 {
   height: 6.5rem;
   color: #f6edd8;
   background: url(../images/background/navigation-background-w1100.png);
-  box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.5);
   transition: all 0.5s ease;
   z-index: 2; }
   .navigation__button {
@@ -57,7 +81,7 @@ h5 {
       width: 3rem;
       height: 3px;
       background: #4b4e4c;
-      box-shadow: 3px 2px 7px 0px rgba(0, 0, 0, 0.3);
+      box-shadow: 3px 2px 7px rgba(0, 0, 0, 0.3);
       transition: all 0.5s ease; }
       .navigation__button--burger::before {
         content: '';
@@ -66,7 +90,7 @@ h5 {
         width: 3rem;
         height: 3px;
         background: #4b4e4c;
-        box-shadow: 3px 2px 7px 0px rgba(0, 0, 0, 0.3);
+        box-shadow: 3px 2px 7px rgba(0, 0, 0, 0.3);
         transition: all 0.5s ease; }
       .navigation__button--burger::after {
         content: '';
@@ -75,7 +99,7 @@ h5 {
         width: 3rem;
         height: 3px;
         background: #4b4e4c;
-        box-shadow: 3px 2px 7px 0px rgba(0, 0, 0, 0.3);
+        box-shadow: 3px 2px 7px rgba(0, 0, 0, 0.3);
         transition: all 0.5s ease; }
       .navigation__button--burger.activated, .navigation__button--burger.activated::before, .navigation__button--burger.activated::after {
         background-color: #f6edd8;
@@ -99,10 +123,14 @@ h5 {
     width: 9.33rem;
     overflow: visible;
     cursor: pointer;
-    transition: all 0.5s ease;
     z-index: 3; }
     .navigation__logo--image {
-      width: 100%; }
+      width: 100%;
+      border-radius: 50%;
+      transition: all 0.5s ease;
+      transition-duration: 1s; }
+      .navigation__logo--image:focus, .navigation__logo--image:hover {
+        scale: 1.05; }
   .navigation__links {
     display: -ms-flexbox;
     display: flex;
@@ -185,7 +213,7 @@ h5 {
     margin: 1rem 5%;
     padding: 0.5rem;
     background-color: #fbfaf6;
-    box-shadow: 3px 2px 7px 0px rgba(0, 0, 0, 0.3); }
+    box-shadow: 3px 2px 7px rgba(0, 0, 0, 0.3); }
   .header__slides {
     background-color: black; }
   .header__slide {
@@ -233,10 +261,11 @@ h5 {
       font-family: "Roboto";
       font-weight: bold;
       font-size: 1.1rem;
-      text-shadow: 0px 0px 1px black; }
+      text-shadow: 0px 0px 2px; }
       .main__title--separator span {
         position: relative;
-        top: -0.45rem; }
+        top: -0.45rem;
+        letter-spacing: -0.1rem; }
     .main__title--caption {
       font-family: "Oswald";
       font-weight: 400;
@@ -255,33 +284,6 @@ h5 {
         justify-content: space-around;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
-  .main__article {
-    -ms-flex: 1 30rem;
-        flex: 1 30rem; }
-    .main__article .article__image {
-      display: inline-block;
-      margin: 2rem auto 1rem;
-      width: 10rem; }
-      .main__article .article__image--img {
-        width: 100%; }
-    .main__article .article__title {
-      margin: 1rem auto; }
-      .main__article .article__title--caption {
-        margin: 1.5rem auto;
-        font-family: "Roboto Slab";
-        text-shadow: 0px 0px 1px #383a3c; }
-      .main__article .article__title--underline {
-        margin: 1.2rem auto;
-        width: 5rem;
-        background-color: #383a3c;
-        padding-bottom: 1px;
-        box-shadow: 0px 0px 2px #383a3c; }
-    .main__article .article__paragraph {
-      margin: 1rem 2rem;
-      font-family: "Roboto Slab";
-      font-size: 1.4rem;
-      line-height: 1.8;
-      text-align: left; }
   .main__dashline {
     width: 100%;
     padding: 0.5rem;
@@ -293,6 +295,36 @@ h5 {
       border-bottom: none;
       border-top: 1px dashed transparent;
       border-color: #383a3c; }
+
+.about__article {
+  -ms-flex: 1 30rem;
+      flex: 1 30rem; }
+  .about__article .about__image {
+    display: inline-block;
+    margin: 2rem auto 1rem;
+    width: 10rem; }
+    .about__article .about__image--img {
+      width: 100%; }
+
+.about__title {
+  margin: 1rem auto; }
+  .about__title--caption {
+    margin: 1.5rem auto;
+    font-family: "Roboto Slab";
+    text-shadow: 0px 0px 1px #383a3c; }
+  .about__title--underline {
+    margin: 1.2rem auto;
+    width: 5rem;
+    background-color: #383a3c;
+    padding-bottom: 1px;
+    box-shadow: 0px 0px 2px #383a3c; }
+
+.about__paragraph {
+  margin: 1rem 2rem;
+  font-family: "Roboto Slab";
+  font-size: 1.4rem;
+  line-height: 1.8;
+  text-align: left; }
 
 .footer {
   font-size: 2.2rem;
@@ -308,10 +340,11 @@ h5 {
       font-family: "Roboto";
       font-weight: bold;
       font-size: 1.1rem;
-      text-shadow: 0px 0px 1px black; }
+      text-shadow: 0px 0px 2px; }
       .footer__title--separator span {
         position: relative;
-        top: -0.45rem; }
+        top: -0.45rem;
+        letter-spacing: -0.1rem; }
     .footer__title--caption {
       font-family: "Oswald";
       font-weight: 400;
@@ -340,33 +373,16 @@ h5 {
     cursor: pointer;
     width: 7rem; }
     .footer .social-media__button--image {
-      width: 100%; }
+      width: 100%;
+      border-radius: 50%;
+      transition: all 1s ease; }
+      .footer .social-media__button--image:focus, .footer .social-media__button--image:hover {
+        background-color: #f6edd8;
+        box-shadow: 0px 0px 1rem; }
   .footer__form-container {
     display: inline-block;
     margin: 2rem auto;
     width: 35rem; }
-    .footer__form-container .form {
-      margin: 2rem auto; }
-      .footer__form-container .form__list {
-        list-style: none; }
-      .footer__form-container .form__element {
-        height: 3rem;
-        margin: 0.4rem 0;
-        padding: 0.2rem;
-        width: 100%;
-        border-radius: 6px;
-        border: none; }
-      .footer__form-container .form__textarea {
-        padding: 0.2rem;
-        height: 9rem; }
-      .footer__form-container .form__button {
-        height: 3rem;
-        padding: 0.2rem 1rem;
-        border-radius: 6px;
-        float: left;
-        border: none;
-        text-transform: capitalize;
-        cursor: pointer; }
   .footer__dashline {
     width: 100%;
     padding: 0.5rem;
@@ -378,3 +394,35 @@ h5 {
       border-bottom: none;
       border-top: 1px dashed transparent;
       border-color: #f6edd8; }
+
+.form {
+  margin: 2rem auto;
+  font-family: 'Roboto'; }
+  .form__list {
+    list-style: none; }
+  .form__element {
+    width: 100%;
+    height: 3rem;
+    margin: 0.4rem 0;
+    font-size: 1.6rem;
+    font-family: 'Roboto';
+    text-indent: 0.5rem;
+    line-height: 1.7;
+    border-radius: 6px;
+    border: none; }
+  .form__textarea {
+    height: 15rem; }
+  .form__button {
+    float: left;
+    height: 3rem;
+    padding: 0.2rem 1rem;
+    font-size: 1.6rem;
+    font-family: 'Roboto';
+    border-radius: 6px;
+    border: none;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: all 0.5s ease; }
+    .form__button:focus, .form__button:hover {
+      color: #4b4e4c;
+      background-color: #f6edd8; }

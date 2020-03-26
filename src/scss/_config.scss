@@ -70,11 +70,11 @@ $text-fair-color: rgb(246, 237, 216);
 }
 
 @mixin container-shadow {
-  box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.5);
 }
 
 @mixin element-shadow {
-  box-shadow: 3px 2px 7px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 3px 2px 7px rgba(0, 0, 0, 0.3);
 }
 
 @mixin main-title {
@@ -86,11 +86,12 @@ $text-fair-color: rgb(246, 237, 216);
     font-family: "Roboto";
     font-weight: bold;
     font-size: 1.1rem;
-    text-shadow: 0px 0px 1px rgba(0, 0, 0, 1);
+    text-shadow: 0px 0px 2px;
 
     & span {
       position: relative;
       top: -0.45rem;
+      letter-spacing: -0.1rem;
     }
   }
 

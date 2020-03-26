@@ -88,11 +88,18 @@
     width: 9.33rem;
     overflow: visible;
     cursor: pointer;
-    @include transition-ease;
     z-index: 3;
     
     &--image {
       width: 100%;
+      border-radius: 50%;
+      @include transition-ease;
+      transition-duration: 1s;
+
+      &:focus,
+      &:hover {
+        scale: 1.05;
+      }
     }
   }
 
