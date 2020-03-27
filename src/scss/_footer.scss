@@ -1,10 +1,12 @@
-.footer {
-  font-size: 2.2rem;
+footer {
   color: $text-fair-color;
   text-align: center;
-
   background: url(../images/background/footer-background-w1100.png);;
   @include transition-ease;
+}
+
+.footer {
+  margin: 0 5%;
 
   &__title {
     @include main-title;

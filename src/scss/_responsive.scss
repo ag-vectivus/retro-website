@@ -1,0 +1,187 @@
+@include media-medium {
+  html {
+    font-size: 10.5px;
+  } 
+
+  .header,
+  .main__about--container,
+  .main__portfolio--container,
+  .main__blog--container,
+  .footer {
+    margin: 0 15%;
+  }
+
+  .header__ribbon {
+    width: 80%;
+  }
+
+  .portfolio__box {
+    flex: 1 45%;
+  }
+
+  .footer__form-container {
+    width: 40rem;
+  }
+}
+  
+@include media-large {
+  html {
+    font-size: 11px;
+  } 
+
+  .navigation {
+    &__button {
+      visibility: hidden;
+    }
+
+    &__logo {
+      position: static;
+      margin: 0 auto;
+      padding-top: 0.5rem;
+    }
+    
+    &__links {
+      margin: 0 5%;
+      @include flex-row;
+      justify-content: space-between;
+      visibility: visible;
+      transform: translateY(0);
+      position: relative;
+      top: -8.33rem;
+      font-size: 2rem;
+    }
+
+    &__link {
+      visibility: visible;
+      transform: translateX(0);
+
+      &:nth-of-type(2) {
+        margin-right: 5rem;
+      }
+
+      &:nth-of-type(3) {
+        margin-left: 5rem;
+      }
+
+      &:focus,
+      &:hover {
+        color: $brickred-color;
+      }
+    }
+  }
+
+  .header {
+
+    &__title {
+        margin: 5rem auto 3rem;
+    }
+
+    &__ribbon {
+      width: 65%;
+    }
+
+    &__slider {
+      margin: 3rem 0;
+
+      &__caption {
+        margin-top: 3rem;
+
+        &--second-line {
+          margin-bottom: 3rem;
+        }
+      }
+    }
+  }
+
+  .about__article {
+    flex: 1 50%;
+  }
+
+  .blog__article {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: stretch;
+  
+    .blog__image {
+      flex: 1 50%;
+      width: 50%;
+      margin: 0 1rem 2rem 0;
+    }
+
+    &--wrapper {
+      flex: 1 50%;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      align-content: flex-start;
+    }
+
+    .blog__title {
+      flex: 4 100%;
+      width: 100%;
+
+      &--caption {
+        flex: 2 70%;
+
+        &:nth-of-type(even) {
+          text-align: right;
+          flex: 1 25%;
+        }
+      }
+    
+      &--separator {
+        max-width: 5rem;
+      }
+    }
+
+    .blog__paragraph {
+      
+      &--overflow {
+        display: inline-block;
+        max-height: 10rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      &--more {
+        position: relative;
+        top: -1rem;
+      }
+    }
+  }
+  
+  .footer__form-container {
+    width: 45rem;
+  }
+
+}
+
+@include media-larger {
+  html {
+    font-size: 11.5px;
+  } 
+
+  .about__article {
+    flex: 1 25%;
+  }
+
+  .portfolio__box {
+    flex: 1 20%;
+  }
+
+  .blog__article {
+  
+    .blog__image {
+      flex: 1 30%;
+      width: 50%;
+      margin: 0 1rem 2rem 0;
+    }
+
+    &--wrapper {
+      flex: 1 70%;
+    }
+  }
+}
