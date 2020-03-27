@@ -56,5 +56,18 @@
     opacity: 0.7;
     font-weight: bold;
     text-transform: uppercase;
+    @include transition-ease;
+
+    &:link {
+      color: $text-dark-color;
+    }
+
+    &:visited,
+    &:focus,
+    &:active,
+    &:hover {
+      opacity: 1;
+      color: $brickred-color;
+    }
   }
 }
