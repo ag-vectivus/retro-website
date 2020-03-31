@@ -9,3 +9,40 @@
 @import 'footer';
 @import 'form';
 @import 'responsive';
+
+.up-button {
+  position: fixed;
+  bottom: 15vh;
+  right: 2rem;
+  z-index: 1;
+  transform: translateX(1000%);
+  @include transition-ease;
+
+  &.active {
+    transform: translateX(0);
+    @include transition-ease;
+  }
+
+  &__image {
+    opacity: 0.5;
+    border-radius: 50%;
+    width: 5rem;
+    @include transition-ease;
+    transition-duration: 1s;
+    cursor: pointer;
+
+    &:focus,
+    &:hover {
+      opacity: 1;
+      background-color: $text-fair-color;
+      box-shadow: 0px 0px 1rem $text-fair-color;
+    }
+  }
+
+
+
+
+
+
+}
+
