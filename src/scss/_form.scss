@@ -36,8 +36,8 @@
 
     &:focus,
     &:hover {
-      color: $text-medium-color;
       background-color: $text-fair-color;
+      box-shadow: 0px 0px 0.5rem $text-fair-color;
     }
   }
 }

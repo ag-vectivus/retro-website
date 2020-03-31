@@ -43,6 +43,7 @@
 
   &__box {
     margin: 1rem 1rem;
+    align-self: stretch;
     flex: 1 100%;
     background-color: rgba(255, 255, 255, 1);
     border-radius: 3px;
@@ -53,7 +54,10 @@
     margin: 0.3rem;
     background-color: $lightgrey-color;
     opacity: 0.7;
-    padding-bottom: 210px;
+
+    &--img {
+      width: 100%;
+    }
   }
 
   &__reel {

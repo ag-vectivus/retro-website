@@ -34,6 +34,10 @@
       visibility: hidden;
     }
 
+    &__menu {
+      max-height: 6.5rem;
+    }
+
     &__logo {
       position: static;
       margin: 0 auto;
@@ -163,6 +167,19 @@
   html {
     font-size: 11.5px;
   } 
+
+  .header,
+  .main__about--container,
+  .main__portfolio--container,
+  .main__blog--container,
+  .footer {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .header__slide {
+    max-height: 550px;
+  }
 
   .about__article {
     flex: 1 25%;

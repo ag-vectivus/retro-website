@@ -25,6 +25,7 @@ header {
   }
 
   &__slider {
+    display: inline-block;
     margin: 1rem 0;
     padding: 0.5rem;
     background-color: rgba(251, 250, 246, 1);
@@ -36,8 +37,7 @@ header {
   }
 
   &__slide {
-    padding-bottom: 15rem;
-    background-color: rgba(227, 223, 215, 1); // temporary
+    width: 100%;
   }
 
   .slider__caption { 

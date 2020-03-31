@@ -3,7 +3,7 @@
   top: 0;
   height: 6.5rem;
   color: $text-fair-color;
-  background: url(../images/background/navigation-background-w1100.png); // temporary
+  background: url(../images/background/navigation-background-w1100.png) center; // temporary
   @include container-shadow;
   @include transition-ease;
   z-index: 2;
