@@ -131,14 +131,27 @@
     @include transition-ease;
     transform: translateX(-100vw);
 
-    &.open {
-      visibility: visible;
-      transform: translateX(0);
+    &--link {
+      text-decoration: none;
+
+      &:link,
+      &:visited {
+        color: inherit;
+      }
 
       &:focus,
       &:hover {
         color: $brickred-color;
       }
+
+      &:active {
+        color: inherit;
+      }
+    }
+
+    &.open {
+      visibility: visible;
+      transform: translateX(0);
     }
   }
 

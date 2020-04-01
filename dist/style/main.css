@@ -34,7 +34,8 @@ html {
 
 html {
   font-size: 10px;
-  line-height: 1; }
+  line-height: 1;
+  scroll-behavior: smooth; }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
@@ -170,12 +171,18 @@ h6 {
     transition: all 0.5s ease;
     -webkit-transform: translateX(-100vw);
             transform: translateX(-100vw); }
+    .navigation__link--link {
+      text-decoration: none; }
+      .navigation__link--link:link, .navigation__link--link:visited {
+        color: inherit; }
+      .navigation__link--link:focus, .navigation__link--link:hover {
+        color: #e38b69; }
+      .navigation__link--link:active {
+        color: inherit; }
     .navigation__link.open {
       visibility: visible;
       -webkit-transform: translateX(0);
               transform: translateX(0); }
-      .navigation__link.open:focus, .navigation__link.open:hover {
-        color: #e38b69; }
   .navigation__dashline {
     position: absolute;
     top: 5.75rem;
@@ -405,7 +412,12 @@ header {
 .portfolio__caption {
   margin-bottom: 2rem;
   font-family: "Oswald";
-  line-height: 1.8; }
+  line-height: 1.8;
+  cursor: pointer;
+  transition: all 0.5s ease; }
+  .portfolio__caption:focus, .portfolio__caption:hover {
+    color: #f6edd8;
+    scale: 1.1; }
   .portfolio__caption--overline {
     margin: 2rem auto 0;
     width: 5rem;
@@ -735,6 +747,13 @@ footer {
   .blog__article--wrapper {
     -ms-flex: 1 70%;
         flex: 1 70%; } }
+
+#about,
+#portfolio,
+#blog,
+#contact {
+  position: relative;
+  top: -5.5rem; }
 
 .up-button {
   position: fixed;

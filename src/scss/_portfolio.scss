@@ -81,6 +81,14 @@
     margin-bottom: 2rem;
     font-family: "Oswald";
     line-height: 1.8;
+    cursor: pointer;
+    @include transition-ease;
+
+    &:focus,
+    &:hover {
+      color: $text-fair-color;
+      scale: 1.1;
+    }
 
     &--overline {
         margin: 2rem auto 0;
