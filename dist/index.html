@@ -1,10 +1,13 @@
 <!DOCTYPE html>
+<html lang="en-EN">
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="author" content="ag-vectivus">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Retro</title>
-    <meta name="description" content="">
+    <meta name="description" content="Website created in order to train creating website from PSD.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel ="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style/main.css">
     <script src="script/main.js" defer></script>
   </head>
@@ -232,19 +235,23 @@
         <h4 class="footer__title--separator"><span>_____</span> ⨉⨉⨉ <span>_____</span></h4>
         <h4 class="footer__title--caption">i'll be glad to answer your questions!</h4>
         <div class="footer__form-container">
-          <form action="#" method="post" class="footer__form"> 
+          <form action="#" method="post" class="footer__form">
             <ul class="form__list">
              <li>
-                <input type="text" id="name" name="user_name" placeholder="Name"  class="form__element">
+               <label for="name" aria-label="required" class="form__element--label">Name: </label>
+                <input type="text" id="name" name="user_name" placeholder="Name" required class="form__element" minlength="2" maxlength="30">
               </li>
               <li>
-                <input type="email" id="mail" name="user_email"   placeholder="Email address" class="form__element">
+                <label for="email" aria-label="required" class="form__element--label">E-mail: </label>
+                <input type="email" id="mail" name="user_email" placeholder="Email address" required class="form__element" minlength="6" maxlength="30">
               </li>
               <li>
-                <input type="text" id="subject" name="user_subject"   placeholder="Subject" class="form__element">
+                <label for="subject" aria-label="required" class="form__element--label">Subject: </label>
+                <input type="text" id="subject" name="user_subject" placeholder="Subject" required class="form__element" maxlength="80">
               </li>
               <li>
-                <textarea id="message" name="user_message" placeholder="Your  message" class="form__element form__textarea"></textarea>
+                <label for="message" aria-label="required" class="form__element--label">Message: </label>
+                <textarea id="message" name="user_message" placeholder="Your  message" required class="form__element form__textarea" maxlength="300"></textarea>
               </li>
               <li class="form__element">
 			    		  <button type="submit" class="form__button">send message</button>

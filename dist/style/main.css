@@ -581,6 +581,11 @@ footer {
     line-height: 1.7;
     border-radius: 6px;
     border: none; }
+    .form__element--label {
+      float: left;
+      font-size: 1px;
+      line-height: 0.1;
+      visibility: hidden; }
   .form__textarea {
     height: 15rem; }
   .form__button {
