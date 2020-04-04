@@ -15,6 +15,10 @@
     width: 80%;
   }
 
+  .header__slides {
+    max-height: 30rem
+  }
+
   .portfolio__box {
     flex: 1 45%;
   }
@@ -81,11 +85,19 @@
     }
 
     &__ribbon {
-      width: 65%;
+      width: 60%;
     }
 
     &__slider {
       margin: 3rem 0;
+      
+      .slider__navigation {
+        .slider__button {
+          font-size: 3rem;
+          height: 7rem;
+          width: 2.5rem;
+        }
+      }
 
       &__caption {
         margin-top: 3rem;
@@ -94,6 +106,10 @@
           margin-bottom: 3rem;
         }
       }
+    }
+
+    .header__slides {
+      max-height: 37rem;
     }
   }
 
@@ -177,8 +193,17 @@
     margin: 0 auto;
   }
 
+  .header__ribbon {
+    width: 50%;
+  }
+
+  .header__slider {
+    display: inline-block;
+    max-width: 60%;
+  }
+
   .header__slide {
-    max-height: 550px;
+    max-height: 35rem;
   }
 
   .about__article {

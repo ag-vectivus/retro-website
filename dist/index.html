@@ -8,7 +8,7 @@
     <meta name="description" content="Website created in order to train creating website from PSD.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel ="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/style.css">
     <script src="script/main.js" defer></script>
   </head>
   <body>
@@ -40,7 +40,34 @@
         <div class="header__ribbon"><img src="../images/ribbon.png" alt=""  class="header__ribbon--image"></div>
         <div class="header__slider">
           <div class="header__slides">
-            <img src="images/photos/car-1-w1100.jpg"  alt="Man standing nearby the old style car in the foreground of small town located on the slope of the hill." class="header__slide">
+<!--             <img srcset="car-1-w320.jpg 320w,
+            car-1-480w.jpg 480w,
+            car-1-800w.jpg 800w,
+            car-1-1100w.jpg 1100w"
+    sizes="(max-width: 320px) 320px,
+           (max-width: 480px) 480px,
+           (max-width: 800px) 800px,
+           1100px"
+    src="images/photos/car-1-1100w.jpg" alt="Man standing nearby the old style car in the foreground of small town located on the slope of the hill."
+    class="header__slide header__slide--active"> -->
+            <img src="images/photos/car-1-w1100.jpg" alt="Man standing nearby the old style car in the foreground of small town located on the slope of the hill." class="header__slide header__slide--active">
+            <img src="images/photos/car-2-w1100.jpg" alt="Front of the old style cabriolet roadster." class="header__slide header__slide--next">
+            <img src="images/photos/car-3-w1100.jpg" alt="Old style ambulance in front of the building." class="header__slide">
+            <div class="slider__navigation">
+              <button type="button" class="slider__button slider__button--previous">&lt;</button>
+              <button type="button" class="slider__button slider__button--next">&gt;</button>
+            </div>
+            <ul class="slider__dots">
+              <li class="slider__dot slider__dot--active">
+                <button class="slider__dot--button" type="button"></button>
+              </li>
+              <li class="slider__dot">
+                <button class="slider__dot--button" type="button"></button>
+              </li>
+              <li class="slider__dot">
+                <button class="slider__dot--button" type="button"></button>
+              </li>
+            </ul>
           </div>
           <div class="slider__caption"><h3>kodak camera</h3></div>
         </div>
