@@ -9,7 +9,7 @@ footer {
   margin: 0 5%;
 
   &__title {
-    @include main-title;
+    @include main-title(rgba(255, 255, 255, 0.3));
   }
 
   .social__title {
@@ -64,3 +64,5 @@ footer {
     }
   }
 }
+
+@import 'form';

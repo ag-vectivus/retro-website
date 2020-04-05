@@ -1,13 +1,9 @@
-@import 'fonts';
-@import 'config';
-@import 'navigation';
-@import 'header';
-@import 'main';
-@import 'about';
-@import 'portfolio';
-@import 'blog';
-@import 'footer';
-@import 'form';
+@import './config/fonts';
+@import './config/config';
+@import './elements/nav/navigation';
+@import './elements/header/header';
+@import './elements/main/main';
+@import './elements/footer/footer';
 @import 'responsive';
 @import 'accessibility';
 
