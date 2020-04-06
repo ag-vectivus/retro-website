@@ -15,12 +15,8 @@
     width: 80%;
   }
 
-  .header__slides {
-    max-height: 30rem
-  }
-
   .portfolio__box {
-    flex: 1 45%;
+    flex: 1 40%;
   }
 
   .footer__form-container {
@@ -106,10 +102,6 @@
           margin-bottom: 3rem;
         }
       }
-    }
-
-    .header__slides {
-      max-height: 37rem;
     }
   }
 
@@ -200,10 +192,6 @@
   .header__slider {
     display: inline-block;
     max-width: 60%;
-  }
-
-  .header__slide {
-    max-height: 35rem;
   }
 
   .about__article {
