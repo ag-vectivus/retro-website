@@ -1,0 +1,105 @@
+.main__portfolio--container {
+  margin: 0 5%;
+}
+
+.portfolio {
+
+  &__filter {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    margin: 4rem 0 2rem;
+    font-family: "Roboto";
+    line-height: 1.8;
+    list-style: none;
+
+    &--description {
+      font-size: 1.6rem;
+      font-weight: bold;
+      text-indent: 1rem;
+    }
+
+    &--label {
+      margin: 0.7rem 0 0 1.5rem;
+      padding: 0 1rem;
+      line-height: 1.4;
+      font-size: 1.4rem;
+      background: rgba(255, 255, 255, 1);
+      border-radius: 0.2rem;
+      cursor: pointer;
+      @include element-shadow;
+      @include transition-ease;
+
+      &:focus,
+      &:hover {
+        scale: 1.1;
+        color: $text-fair-color;
+        background: $blue-color;
+      }
+    }
+  }
+
+  &__box {
+    margin: 1rem 1rem;
+    align-self: stretch;
+    flex: 1 30%;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 3px;
+    text-align: center;
+    @include transition-ease;
+
+    &--active {
+      background-color: $blue-color;
+    }
+  }
+
+  &__photo {
+    margin: 0.3rem;
+    background-color: $lightgrey-color;
+    opacity: 0.7;
+
+    &--img {
+      width: 100%;
+    }
+  }
+
+  &__reel {
+    width: 20%;
+    border-radius: 50%;
+    border: 5px solid rgba(255, 255, 255, 1);
+    position: relative;
+    top: -2rem;
+    z-index: 1;
+  }
+
+  &__photo--caption {
+    position: relative;
+    top: -1.5rem;
+    font-family: "Roboto";
+    font-weight: bold;
+    opacity: 0.7;
+  }
+
+  &__caption {
+    margin-bottom: 2rem;
+    font-family: "Oswald";
+    line-height: 1.8;
+    cursor: pointer;
+    @include transition-ease;
+
+    &:focus,
+    &:hover {
+      color: $text-fair-color;
+      scale: 1.1;
+    }
+
+    &--overline {
+        margin: 2rem auto 0;
+        width: 5rem;
+        color: $text-medium-color;
+        text-shadow: 0px 0px 1px;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+.main {
+  color: $text-dark-color;
+  text-align: center;
+  @include transition-ease;
+
+  &__about {
+    background: url(../images/background/about-background-w1100.png);
+    background-size: cover;
+  }
+
+  &__portfolio {
+    background: url(../images/background/portfolio-background-w1100.png);
+    background-size: cover;
+  }
+  
+  &__blog {
+    background: url(../images/background/blog-background-w1100.png);
+    background-size: cover;
+  }
+
+  &__title {
+    @include main-title(rgba(0, 0, 0, 0.3));
+  }
+
+  &__container {
+    margin: 2rem 0;
+    @include flex-row;
+    flex-wrap: wrap;
+  }
+
+  &__dashline {
+    @include dashline-first;
+    border-color: $text-dark-color;
+
+    &--bottom {
+      @include dashline-second;
+      border-color: $text-dark-color;
+    }
+  }
+}
+
+@import 'about';
+@import 'portfolio';
+@import 'blog';
