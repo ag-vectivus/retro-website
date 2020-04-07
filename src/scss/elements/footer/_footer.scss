@@ -1,7 +1,8 @@
 footer {
   color: $text-fair-color;
   text-align: center;
-  background: url(../images/background/footer-background-w1100.png);;
+  background: url(../images/background/footer-background-w1100.png);
+  background-size: cover;
   @include transition-ease;
 }
 
@@ -25,7 +26,7 @@ footer {
 
   &__social-media {
     @include flex-row;
-    width: 35rem;
+    max-width: 35rem;
     margin: 3rem auto 1.5rem;
   }
 
@@ -51,7 +52,7 @@ footer {
   &__form-container {
     display: inline-block;
     margin: 2rem auto;
-    width: 35rem;
+    max-width: 35rem;
   }
 
   &__dashline {
